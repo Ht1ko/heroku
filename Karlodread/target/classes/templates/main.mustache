@@ -1,0 +1,30 @@
+<html>
+
+<body>
+<title>tut budet Ajax</title>
+    <div>
+        <form action="/logout" method="post">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
+    <div>
+        <form method="post">
+            <input type="text" name="text" placeholder="Type message" />
+            
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <div>Message List</div>
+	
+    {{#messages}}
+    <div>
+		{{#user}}
+			<b>{{username}}</b>
+		{{/user}}
+        <span>{{text}}</span>
+    </div>
+    {{/messages}}
+</body>
+</html>

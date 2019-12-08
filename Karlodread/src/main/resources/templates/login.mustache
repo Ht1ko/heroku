@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Autorisation</title>
+</head>
+<body>
+<style>
+body{
+	color:blue;
+	text-align:center;
+	
+}
+
+</style>
+Login page
+<form action="/login" method="post" align="center">
+    <div><label> User Name: <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+    <div><input type="submit" value="Sign In"/></div>
+</form>
+<a href="/registration">Add new user</a>
+</body>
+</html>
